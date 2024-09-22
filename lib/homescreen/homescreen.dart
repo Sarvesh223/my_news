@@ -16,10 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    // Fetch the news and country code
+    // Fetching the news and country code
     Provider.of<NewsProvider>(context, listen: false).fetchNews().then((_) {
       setState(() {
-        // Fetch the country code from the provider after fetching news
+        // Fetching the country code from the provider after fetching news
         _countryCode =
             Provider.of<NewsProvider>(context, listen: false).countryCode;
       });
@@ -44,9 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.white,
                 ),
                 SizedBox(width: 8),
-                // Display the dynamically fetched country code
                 Text(
-                  _countryCode.toUpperCase(), // Show the fetched country code
+                  _countryCode.toUpperCase(),
                   style: GoogleFonts.poppins(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
