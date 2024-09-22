@@ -86,7 +86,8 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                         ),
                         TextSpan(
                           text: isLogin ? 'Signup' : 'Login',
-                          style: TextStyle(color: primaryColor),
+                          style: TextStyle(
+                              color: primaryColor, fontWeight: FontWeight.bold),
                         ),
                       ],
                     ),
